@@ -35,8 +35,8 @@ To launch the host the app in Production mode follow this process
 MIT License
 
 Copyright (c) 2017 
-SUMEET SETHI <sumeetsethi.asm@gmail.com>
-RONALD WILLIAMS <rwilliams0291@gmail.com>
+-   SUMEET SETHI [<sumeetsethi.asm@gmail.com>]
+-   RONALD WILLIAMS [<rwilliams0291@gmail.com>]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
