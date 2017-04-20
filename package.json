@@ -1,19 +1,23 @@
 {
-	"name": "bp-todo-core",
-	"version": "1.0.0",
-	"description": "Boiler Plate TODO Core app",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/bparch/bp-todo-core.git"
-	},
-	"author": "Sumeet Sethi && Ronald Williams",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/bparch/bp-todo-core/issues"
-	},
-	"homepage": "https://github.com/bparch/bp-todo-core#readme"
+  "author": "Sumeet Sethi && Ronald Williams",
+  "name": "bp-todo-core",
+  "version": "1.0.0",
+  "description": "Boiler Plate TODO Core app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bparch/bp-todo-core.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bparch/bp-todo-core/issues"
+  },
+  "homepage": "https://github.com/bparch/bp-todo-core#readme"
 }
