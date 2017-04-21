@@ -1,11 +1,11 @@
 ## Notes
 
-This Boiler Plate (referenced throughout the app as BP | Bp | bp) is running the following stack:
+This Boiler Plate is running the following stack:
 -   NodeJS
--   ES2015 (ES6)
+-	ExpressJS
 -   MongoDB
 -   Mongoose
--	ExpressJS
+-   BodyParser
 
 
 ## Installation
@@ -19,15 +19,8 @@ Follow these steps to install this app:
 ## Launch
 
 To launch the app in DevServer mode key in this command 
--	npm run dev
--	In browser key in the URL which the above command generated
-
-To launch the host the app in Production mode follow this process
--   npm run prod 
--   The above command will package and output files to dist folder
--	npm install http-server -g
--	http-server /path/to/dist
--	In browser key in the URL which the above command generated
+-	npm run start
+-	In browser key in the URL as http://localhost:8001/todos
 
 
 ## License
