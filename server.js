@@ -30,4 +30,4 @@ var routes = require('./api/routes/todosRoutes');
 routes(app);
 
 app.listen(8001);
-console.log('Running on port 8001...');
+console.log('Server is listening on port 8001...');
