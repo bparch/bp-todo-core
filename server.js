@@ -7,15 +7,9 @@ var bodyParser = require('body-parser');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/todo');
 
-//app.use(bodyParser.urlencoded({extended: true}));
-/*app.use(bodyParser.raw({ type: 'application/json' }));
-app.use(bodyParser.json());*/
-
-
-
+// This is a way to use RAW data from request
 app.use(function (req, res, next) {
-    var contentType = req.headers['content-type'] || ''
-        , mime = contentType.split(';')[0];
+    var contentType = req.headers['content-type'] || '', mime = contentType.split(';')[0];
 
     if (mime != 'application/json') {
         return next();
@@ -32,14 +26,8 @@ app.use(function (req, res, next) {
     });
 });
 
-
-/*app.use(function(request, response){
-    response.status(404).send({url: request.originalUrl + 'not found'})    
-});*/
-
 var routes = require('./api/routes/todosRoutes');
 routes(app);
-
 
 app.listen(8001);
 console.log('Running on port 8001...');

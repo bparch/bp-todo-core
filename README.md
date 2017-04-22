@@ -3,9 +3,8 @@
 This Boiler Plate is running the following stack:
 -   NodeJS
 -	ExpressJS
+-   MongooseJS
 -   MongoDB
--   Mongoose
--   BodyParser
 
 
 ## Installation
@@ -14,11 +13,13 @@ Follow these steps to install this app:
 -   Clone this repo from GIT
 -   cd to cloned directory
 -   npm install
+-   You will also need to have MongoDB installed on your machine
 
 
 ## Launch
 
-To launch the app in DevServer mode key in this command 
+To launch the app key in this command 
+-   On a different terminal key in mongo to start MongoDB server
 -	npm run start
 -	In browser key in the URL as http://localhost:8001/todos
 

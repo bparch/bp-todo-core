@@ -10,6 +10,9 @@ var TodosSchema = new Schema({
     description: {
         type: String
     },
+    userName: {
+        type: String
+    },
     timeStamp: {
         type: Date,
         default: Date.now

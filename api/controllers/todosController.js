@@ -32,7 +32,7 @@ exports.read_a_todo = function (request, response) {
 };
 
 exports.update_a_todo = function (request, response) {
-    Todo.findOneAndUpdate(request.params.todoId, request.body, { new: true }, function (error, todo) {
+    Todo.findOneAndUpdate(request.params.todoId, JSON.parse(request.rawBody), { new: true }, function (error, todo) {
         if (error) {
             response.send(error);
         }
@@ -47,6 +47,6 @@ exports.delete_a_todo = function (request, response) {
         if (error) {
             response.send(error);
         }
-        response.json({ message: 'Todo was removed successfully' });
+        response.json({ message: 'Todo ' + request.params.todoId + ' was removed successfully' });
     });
 };
