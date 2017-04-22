@@ -3,9 +3,10 @@
   "name": "bp-todo-core",
   "version": "1.0.0",
   "description": "Boiler Plate TODO Core app",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start ./karma.conf.js",
     "start": "node server.js"
   },
   "dependencies": {
@@ -13,11 +14,16 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.5"
   },
+  "devDependencies": {
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bparch/bp-todo-core.git"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bparch/bp-todo-core/issues"
   },
