@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var Todo = mongoose.model('Todos');
 
-exports.list_all_todos = function (request, response) {
+exports.getAllTodos = function (request, response) {
     Todo.find({}, function (error, todos) {
         if (error) {
             response.send(error);
@@ -12,7 +12,7 @@ exports.list_all_todos = function (request, response) {
     });
 };
 
-exports.create_a_todo = function (request, response) {
+exports.addTodo = function (request, response) {
     var new_todo = new Todo(JSON.parse(request.rawBody));
     new_todo.save(function (error, todo) {
         if (error) {
@@ -22,7 +22,7 @@ exports.create_a_todo = function (request, response) {
     });
 };
 
-exports.read_a_todo = function (request, response) {
+exports.getTodo = function (request, response) {
     Todo.findById(request.params.todoId, function (error, todo) {
         if (error) {
             response.send(error);
@@ -31,7 +31,7 @@ exports.read_a_todo = function (request, response) {
     });
 };
 
-exports.update_a_todo = function (request, response) {
+exports.modifyTodo = function (request, response) {
     Todo.findOneAndUpdate(request.params.todoId, JSON.parse(request.rawBody), { new: true }, function (error, todo) {
         if (error) {
             response.send(error);
@@ -40,7 +40,7 @@ exports.update_a_todo = function (request, response) {
     });
 };
 
-exports.delete_a_todo = function (request, response) {
+exports.deleteTodo = function (request, response) {
     Todo.remove({
         _id: request.params.todoId
     }, function (error, todo) {
