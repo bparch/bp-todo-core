@@ -19,7 +19,6 @@ Follow these steps to install this app:
 ## Launch
 
 To launch the app key in this command 
--   On a different terminal key in mongo to start MongoDB server
 -	npm run start
 -	In browser key in the URL as http://localhost:8001/todos
 
