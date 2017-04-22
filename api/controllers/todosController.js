@@ -32,7 +32,7 @@ exports.getTodo = function (request, response) {
 };
 
 exports.modifyTodo = function (request, response) {
-    Todo.findOneAndUpdate(request.params.todoId, JSON.parse(request.rawBody), { new: true }, function (error, todo) {
+    Todo.findOneAndUpdate({_id: request.params.todoId}, JSON.parse(request.rawBody), { new: true }, function (error, todo) {
         if (error) {
             response.send(error);
         }
