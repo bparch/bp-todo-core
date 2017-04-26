@@ -13,7 +13,7 @@ exports.getAllTodos = function (request, response, next) {
 };
 
 exports.addTodo = function (request, response, next) {
-	var new_todo = new Todo(JSON.parse(request.body));
+	let new_todo = new Todo(JSON.parse(request.body));
 	new_todo.save(function (error, todo) {
 		if (error) {
 			return next(error);

@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var Todo = require('./api/models/todosModel');
 var routes = require('./api/routes/todosRoutes');
 
+// Using Promises instead of Callbacks
 mongoose.Promise = global.Promise;
 
 // Connect to the local MongoDB
@@ -23,7 +24,7 @@ app.use(function (request, response) {
 });
 
 app.use(function (error, request, response, next) {
-	console.error(error.stack)
+	console.error(error.stack);
 	response.status(500).send(error);
 });
 
