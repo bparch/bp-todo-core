@@ -13,7 +13,7 @@ exports.getAllTodos = function (request, response) {
 };
 
 exports.addTodo = function (request, response) {
-    var new_todo = new Todo(JSON.parse(request.rawBody));
+    var new_todo = new Todo(JSON.parse(request.body));
     new_todo.save(function (error, todo) {
         if (error) {
             response.send(error);
@@ -32,7 +32,7 @@ exports.getTodo = function (request, response) {
 };
 
 exports.modifyTodo = function (request, response) {
-    Todo.findOneAndUpdate({ _id: request.params.todoId }, JSON.parse(request.rawBody), { new: true }, function (error, todo) {
+    Todo.findOneAndUpdate({ _id: request.params.todoId }, JSON.parse(request.body), { new: true }, function (error, todo) {
         if (error) {
             response.send(error);
         }

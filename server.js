@@ -7,24 +7,14 @@ var bodyParser = require('body-parser');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/todo');
 
-// This is a way to use RAW data from request
-app.use(function (req, res, next) {
-    var contentType = req.headers['content-type'] || '', mime = contentType.split(';')[0];
+// bodyParser will fetch request body and push it to request.body as a buffer
+app.use(bodyParser.raw({ type: 'application/json' }));
 
-    if (mime != 'application/json') {
-        return next();
-    }
-
-    var data = '';
-    req.setEncoding('utf8');
-    req.on('data', function (chunk) {
-        data += chunk;
-    });
-    req.on('end', function () {
-        req.rawBody = data;
-        next();
-    });
-});
+// This is error handling mechanism
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+})
 
 var routes = require('./api/routes/todosRoutes');
 routes(app);

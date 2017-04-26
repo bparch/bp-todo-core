@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var TodosSchema = new Schema({
 	title: {
 		type: String,
-		Required: 'Title is a mandatory field'
+		required: 'Title is a mandatory field'
 	},
 	description: {
 		type: String
