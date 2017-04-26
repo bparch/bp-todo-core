@@ -15,6 +15,19 @@ Follow these steps to install this app:
 -   npm install
 -   You will also need to have MongoDB installed on your machine
 
+Follow these steps to install MongoDB on your machine:
+-   Download and install MongoDB to this custom path - C:\mongodb
+-   Set machines ENV VARIABLES for PATH = C:\mongodb\bin\
+-   Reboot Machine for the ENV VARIABLES PATH to take effect
+-   Create folders under C:\mongodb\
+	a) C:\mongodb\data
+	b) C:\mongodb\data\db
+	c) C:\mongodb\log
+-   Using command prompt key in following commands
+	a) C:\mongodb\bin>mongod --directoryperdb -dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install
+	b) C:\mongodb\bin>net start MongoDB
+	c) C:\mongodb\bin>mongo
+
 
 ## Launch
 
