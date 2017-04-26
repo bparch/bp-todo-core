@@ -20,13 +20,13 @@ Follow these steps to install MongoDB on your machine:
 -   Set machines ENV VARIABLES for PATH = C:\mongodb\bin\
 -   Reboot Machine for the ENV VARIABLES PATH to take effect
 -   Create folders under C:\mongodb\
-	a) C:\mongodb\data
-	b) C:\mongodb\data\db
-	c) C:\mongodb\log
+	-   C:\mongodb\data
+	-   C:\mongodb\data\db
+	-   C:\mongodb\log
 -   Using command prompt key in following commands
-	a) C:\mongodb\bin>mongod --directoryperdb -dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install
-	b) C:\mongodb\bin>net start MongoDB
-	c) C:\mongodb\bin>mongo
+	-   C:\mongodb\bin>mongod --directoryperdb -dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install
+	-   C:\mongodb\bin>net start MongoDB
+	-   C:\mongodb\bin>mongo
 
 
 ## Launch
