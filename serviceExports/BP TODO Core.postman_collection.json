@@ -1,0 +1,103 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BP TODO Core",
+		"_postman_id": "b55dceda-5829-136a-c1a8-75379b1b57bd",
+		"description": "bp-todo-core",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET TODO LIST",
+			"request": {
+				"url": "{{server}}todos",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET ALL TODOS"
+			},
+			"response": []
+		},
+		{
+			"name": "GET TODO",
+			"request": {
+				"url": "{{server}}todos/58fa728e0dd5c63f943566f5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET ALL TODOS"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD TODO",
+			"request": {
+				"url": "{{server}}todos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "user",
+						"value": "todo",
+						"description": ""
+					},
+					{
+						"key": "pwd",
+						"value": "todo123",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Home\",\n\t\"description\": \"Buy a coffee maker\",\n\t\"userName\": \"sumeet\"\n}"
+				},
+				"description": "POST A TODO"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE TODO",
+			"request": {
+				"url": "{{server}}todos/58fab37e648c552c5889bdc8",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Work\",\n    \"description\": \"Code merge resolved\",\n\t\"userName\": \"sumeet\"\n}"
+				},
+				"description": "DELETE A TODO"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TODO",
+			"request": {
+				"url": "{{server}}todos/58fa5c0536d29539a4970135",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "DELETE A TODO"
+			},
+			"response": []
+		}
+	]
+}
