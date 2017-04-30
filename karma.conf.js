@@ -2,7 +2,7 @@ module.exports = function (config) {
 	config.set({
 		basePath: '',
 		frameworks: ['jasmine'],
-		files: ['test/**/*.js'],
+		files: ['test/**/*.js', './node_modules/requirejs/require'],
 		exclude: [],
 		preprocessors: {},
 		reporters: ['progress'],
