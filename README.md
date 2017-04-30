@@ -3,7 +3,7 @@
 This Boiler Plate is running the following stack:
 -   NodeJS
 -	ExpressJS
--   MongooseJS (to connect to MongoDB server)
+-   MongooseJS (to connect and interact with MongoDB server)
 
 
 ## Installation
