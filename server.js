@@ -16,7 +16,7 @@ mongoose.connect('mongodb://bparch:bparch@cluster0-shard-00-00-6jawd.mongodb.net
 app.use(bodyParser.raw({ type: 'application/json' }));
 routes(app);
 
-// This is error handling mechanism
+// Checking for invalid URLs
 app.use(function (request, response) {
 	let validRoute = new RegExp('\/todos*');
 	if (request.originalUrl !== validRoute) {
@@ -24,10 +24,11 @@ app.use(function (request, response) {
 	}
 });
 
+// Using error handling middleware
 app.use(function (error, request, response, next) {
 	console.error(error.stack);
 	response.status(500).send(error);
 });
 
 app.listen(8001);
-console.log('Server is listening on port 8001...');
+console.log('BP-TODO-CORE server is listening on port 8001...');
