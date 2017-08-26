@@ -27,8 +27,7 @@ routes(app);
 
 // Checking for invalid URLs
 app.use(function (request, response) {
-    let validRoute = new RegExp('\/todos*');
-    if (request.originalUrl !== validRoute) {
+    if (request.originalUrl.match(/\/todos*/g) === null) {
         response.status(404).send({ url: request.originalUrl + ' is invalid' })
     }
 });
