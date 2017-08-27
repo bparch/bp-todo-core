@@ -15,11 +15,12 @@ mongoose.connect('mongodb://bparch:bparch@cluster0-shard-00-00-6jawd.mongodb.net
 // Set CORS headers
 app.use(function (request, response, next) {
     response.header("Access-Control-Allow-Origin", "*");
+    response.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
     // OPTIONS method returns 200 and receives another method (POST, PUT, DELETE) in succession to proceed
     if (request.method === 'OPTIONS') {
-        response.send(200);
+        response.sendStatus(200);
     } else {
         next();
     }
