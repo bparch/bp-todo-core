@@ -14,11 +14,16 @@ mongoose.connect('mongodb://bparch:bparch@cluster0-shard-00-00-6jawd.mongodb.net
 
 // Set CORS headers
 app.use(function (request, response, next) {
-    response.setHeader('Access-Control-Allow-Origin', '*');
-    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    // response.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    // OPTIONS method returns 200 and receives another method (POST, PUT, DELETE) in succession to proceed
+    if (request.method === 'OPTIONS') {
+        response.send(200);
+    } else {
+        next();
+    }
+
 });
 
 // bodyParser will fetch request body and push it to request.body as a buffer
