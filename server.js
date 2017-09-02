@@ -44,5 +44,5 @@ app.use(function (error, request, response, next) {
     response.status(500).send(error);
 });
 
-app.listen(8001);
-console.log('BP-TODO-CORE server is listening on port 8001...');
+app.listen(8080);
+console.log('BP-TODO-CORE server is listening on port 8080...');
