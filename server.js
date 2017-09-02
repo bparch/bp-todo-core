@@ -44,5 +44,5 @@ app.use(function (error, request, response, next) {
     response.status(500).send(error);
 });
 
-app.listen(8080);
-console.log('BP-TODO-CORE server is listening on port 8080...');
+app.listen(8000); // Quick break test with OpenShift Red Hat Linux
+console.log('BP-TODO-CORE server is listening on port 8000...');

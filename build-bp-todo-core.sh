@@ -17,7 +17,7 @@ echo "-------------------------------------"
 echo "Pulling new files"
 echo "-------------------------------------"
 svn checkout svn://222.1.1.165/bparch/todo/bp-todo-core /home/todo/bp-todo-core #!/bin/bash
-# use git pull command here instead
+# use git pull https://github.com/bparch/bp-todo-core.git command here instead
 echo "-------------------------------------"
 echo "Pulled new files"
 echo "-------------------------------------"
@@ -27,7 +27,7 @@ echo "Building BP TODO CORE"
 echo "-------------------------------------"
 cd /home/todo/bp-todo-core #!/bin/bash
 docker build -t bp-todo-core-image . #!/bin/bash
-docker run -d -p 8001:8001 --name bp-todo-core-container bp-todo-core-image #!/bin/bash
+docker run -d -p 8080:8080 --name bp-todo-core-container bp-todo-core-image #!/bin/bash
 echo "-------------------------------------"
 echo "Built BP TODO CORE"
 echo "-------------------------------------"
