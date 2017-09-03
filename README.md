@@ -20,7 +20,7 @@ Follow these steps to install this app:
 -   npm install
 -   You will also need to have MongoDB installed on your machine
 
-Follow these steps to install MongoDB on your machine:
+Follow these steps to install MongoDB on your machine if you intend to use MongoDB locally (else skip as app is hooked upto MongoDB Cluster):
 -   Download and install MongoDB to this custom path - C:\mongodb
 -   Set machines ENV VARIABLES for PATH = C:\mongodb\bin\
 -   Reboot Machine for the ENV VARIABLES PATH to take effect
@@ -38,7 +38,7 @@ Follow these steps to install MongoDB on your machine:
 
 To launch the app key in this command 
 -	npm run start
--	In browser key in the URL as http://localhost:8001/todos
+-	In browser key in the URL as http://localhost:8080/todos
 
 
 ## License
