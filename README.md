@@ -6,6 +6,12 @@ This Boiler Plate is running the following stack:
 -   MongooseJS (to connect and interact with MongoDB server)
 
 
+## Hosting
+-   Docker Hub: <https://hub.docker.com/r/setry14/bp-todo-core-image/>
+-   MongoDB: <https://cloud.mongodb.com/v2/59020686df9db163054584cb#clusters>
+-   OpenShift: <https://console.starter-us-west-1.openshift.com/console/project/bp-todo-core/overview>
+
+
 ## Installation
 
 Follow these steps to install this app:
