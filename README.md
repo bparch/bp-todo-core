@@ -6,20 +6,21 @@ This Boiler Plate is running the following stack:
 -   MongooseJS (to connect and interact with MongoDB server)
 
 
-## Deployment
--   Deployment for BP TODO Core app is now completely automated. 
--   Each push to GIT repo will trigger an image build on DuckerHub. 
--   Each change in DuckerHub image will trigger new container build on OpenShift server.
-
-
 ## Hosting
+
 -   GitHub: <https://github.com/bparch/bp-todo-core>
 -   DockerHub: <https://hub.docker.com/r/setry14/bp-todo-core/>
 -   MongoDB: <https://cloud.mongodb.com/v2/59020686df9db163054584cb#clusters>
 -   OpenShift: <https://console.starter-us-west-1.openshift.com/console/project/bp-todo-core/overview>
 
 
-## Installation
+## Deployment to OpenShift
+
+-   Each push to GIT repo will trigger an auto-build of the image on DuckerHub.
+-   Goto Openshift project console, then Applications > Deployments > bp-todo-core > Deploy. This will build and serve latest image.
+
+
+## Installation Locally
 
 Follow these steps to install this app:
 -   Clone this repo from GIT
@@ -41,7 +42,7 @@ Follow these steps to install MongoDB on your machine if you intend to use Mongo
 	-   C:\mongodb\bin>mongo
 
 
-## Launch
+## Launch Locally
 
 To launch the app key in this command 
 -	npm run start
