@@ -46,4 +46,3 @@ app.use(function (error, request, response, next) {
 
 app.listen(8080);
 console.log('BP-TODO-CORE server is listening on port 8080...');
-console.log('TEST: This is being auto-build by DockerHub build process on push to GitHub');
