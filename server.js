@@ -46,3 +46,4 @@ app.use(function (error, request, response, next) {
 
 app.listen(8080);
 console.log('BP-TODO-CORE server is listening on port 8080...');
+console.log('OpenShift Deploy Test');
