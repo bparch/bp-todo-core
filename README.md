@@ -16,11 +16,11 @@ This Boiler Plate is running the following stack:
 
 ## Deployment to OpenShift
 
--   Each push to GIT repo will trigger an auto-build of the image on DuckerHub.
+-   Each push to GIT repo will trigger an auto-build of the image on DockerHub.
 -   Goto Openshift project console, then Applications > Deployments > bp-todo-core > Deploy. This will build and serve latest image.
 
 
-## Installation Locally
+## Install Locally
 
 Follow these steps to install this app:
 -   Clone this repo from GIT
