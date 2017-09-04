@@ -10,7 +10,7 @@ mongoose.Promise = global.Promise;
 
 // Connect to MongoDB server
 // mongoose.connect('mongodb://localhost/todo');
-mongoose.connect('mongodb://bparch:bparch@cluster0-shard-00-00-6jawd.mongodb.net:27017,cluster0-shard-00-01-6jawd.mongodb.net:27017,cluster0-shard-00-02-6jawd.mongodb.net:27017/todo?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin');
+mongoose.connect('mongodb://bparch:bparch@cluster0-shard-00-00-6jawd.mongodb.net:27017,cluster0-shard-00-01-6jawd.mongodb.net:27017,cluster0-shard-00-02-6jawd.mongodb.net:27017/todo?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin', { useMongoClient: true });
 
 // Set CORS headers
 app.use(function (request, response, next) {
